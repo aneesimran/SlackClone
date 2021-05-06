@@ -2,24 +2,35 @@ import React from "react";
 import styled from "styled-components";
 import { db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
+import { useDispatch } from "react-redux";
+import { enterRoom } from "../features/appSlice";
 
 {
   /* for the onclick, if i have addchanneloption as a prop, then trigger addchannel function else trigger the select channel */
 }
 
-function SidebarOption({ Icon, title, addChannelOption , id}) {
-  const addChannel = () => {
-    
-    const channelName = prompt('Please enter the channel name');
+function SidebarOption({ Icon, title, addChannelOption, id }) {
+  const dispatch = useDispatch();
 
-      if (channelName) {
-          db.collection('rooms').add({
-              name: channelName,
-          });
-      }
+  const addChannel = () => {
+    const channelName = prompt("Please enter the channel name");
+
+    if (channelName) {
+      db.collection("rooms").add({
+        name: channelName,
+      });
+    }
   };
 
-  const selectChannel = () => {};
+  const selectChannel = () => {
+    if (id) {
+      dispatch(
+        enterRoom({
+          roomId: id,
+        })
+      );
+    }
+  };
 
   return (
     <SidebarOptionContainer
@@ -63,6 +74,6 @@ const SidebarOptionContainer = styled.div`
 `;
 
 const SidebarOptionChannel = styled.h3`
-    padding: 10px 0;
-    font-weight: 300;
+  padding: 10px 0;
+  font-weight: 300;
 `;
