@@ -53,12 +53,12 @@ const HeaderSearch = styled.div`
   flex: 0.4;
   opacity: 1;
   border-radius: 6px;
-  background-color: #2a98a6;
+  background-color: #142244;
   text-align: center;
   display: flex;
   padding: 0 50px;
   color: white;
-  border: 1px #1894b0 solid;
+  border: 1px #1c2e5d solid;
 
   > input {
     background-color: transparent;
@@ -76,7 +76,7 @@ const HeaderContainer = styled.div`
   width: 100%;
   align-items: center;
   padding: 10px 0;
-  background-color: var(--slack-color);
+  background-color: var(--header-color);
   color: white;
 `;
 

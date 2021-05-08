@@ -32,7 +32,7 @@ const MessageInfo = styled.div`
   padding-left: 10px;
 
   > h4 > span {
-    color: gray;
+    color: #adafb5;
     font-weight: 300;
     margin-left: 4px;
     font-size: 10px;

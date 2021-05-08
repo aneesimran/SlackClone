@@ -60,6 +60,7 @@ const AppLoading = styled.div`
   place-items: center;
   height: 100vh;
   width: 100%;
+  background-color: var(--background-color);
 `;
 
 const AppLoadingContents = styled.div`
@@ -69,11 +70,13 @@ const AppLoadingContents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  border-radius: 30px;
 
   > img {
     height: 100px;
     padding: 20px;
-    margin-bottom: 40px;
+    margin: 100px;
   }
 `;
 

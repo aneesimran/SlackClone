@@ -41,7 +41,6 @@ function Sidebar() {
       <SidebarOption Icon={PeopleAltIcon} title="People & User Groups" />
       <SidebarOption Icon={AppsIcon} title="Apps" />
       <SidebarOption Icon={FileCopyIcon} title="File Browser" />
-      <SidebarOption Icon={ExpandLessIcon} title="Show Less" />
       <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
@@ -57,23 +56,23 @@ function Sidebar() {
 export default Sidebar;
 
 const SidebarContainer = styled.div`
-  background-color: var(--slack-color);
+  background-color: var(--header-color);
   color: white;
   flex: 0.3;
-  border-top: 2px solid #158199;
+  border-top: 2px solid var(--headertext-color);
   max-width: 260px;
   margin-top: 60px;
 
   > hr {
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #158199;
+    border: 1px solid var(--headertext-color);
   }
 `;
 
 const SidebarHeader = styled.div`
   display: flex;
-  border-bottom: 2px solid #158199;
+  border-bottom: 2px solid var(--headertext-color);
   padding: 13px;
 
   > .MuiSvgIcon-root {

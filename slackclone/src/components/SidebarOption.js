@@ -61,7 +61,7 @@ const SidebarOptionContainer = styled.div`
 
   :hover {
     opacity: 0.9;
-    background-color: #0f5e70;
+    background-color: var(--headertext-color);
   }
 
   > h3 {
